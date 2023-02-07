@@ -1,0 +1,56 @@
+{
+    "seasons": [
+        {
+            "name": "Season 1",
+            "episodes": 15
+        },
+        {
+            "name": "Season 2",
+            "episodes": 16
+        },
+        {
+            "name": "Season 3",
+            "episodes": 16
+        },
+        {
+            "name": "Season 4",
+            "episodes": 16
+        },
+        {
+            "name": "Season 5",
+            "episodes": 16
+        },
+        {
+            "name": "Season 6",
+            "episodes": 16
+        },
+        {
+            "name": "Season 7",
+            "episodes": 16
+        },
+        {
+            "name": "Season 8",
+            "episodes": 10
+        },
+        {
+            "name": "Movies",
+            "episodes": 3
+        }
+    ],
+    "gags": {
+        "pineapples": {
+            "file": "data/pineapples.csv",
+            "description": "The pineapple running gag is one of the most prominent running gags in the show. Every episode contains a pineapple, which are referenced here. Pineapple appearances are ranked according to their quality e.g. Appearance of a full pineapple is a 10, simple mention of a pineapple is a 1.",
+            "type": "highest",
+            "high_color": "green",
+            "low_color": "yellow"
+        },
+        "references": {
+            "file": "data/refs.csv",
+            "description": "The show contains many pop culture references.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        }
+    }
+}
