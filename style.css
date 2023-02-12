@@ -5,17 +5,30 @@ html {
     background-color: #818181;
 }
 
-.sidebar {
+body {
+    display: grid;
     height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    /* top: 0; */
+    grid-template-columns: 200px auto;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "header header"
+    "sidebar content";
+    
+    /* Make the sidebar stick to the left and also avoid the slight scroll */
+    margin: 0;
+}
+
+.header {
+    grid-area: header;
+    padding-left: 8px;
+}
+
+.sidebar {
+    grid-area: sidebar;
     background-color: #111;
     overflow-x: hidden;
-    padding-top: 20px;
     list-style-type: none;
+    padding-top: 20px;
 }
 
 .sidebar > li,summary {
@@ -42,9 +55,12 @@ html {
 }
 
 .main {
-    margin-left: 200px;
-    font-size: 28px;
+    grid-area: content;
     padding: 0px 10px;
+}
+
+#selected-gag {
+    font-size: 25px;
 }
 
 /* Elements marked psych are stylised to look like the psych logo */
@@ -72,7 +88,6 @@ html {
 }
 
 #description {
-    width: max-content;
     opacity: 1;
     background-color: white;
     border: solid;

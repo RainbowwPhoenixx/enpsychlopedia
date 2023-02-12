@@ -42,6 +42,7 @@
             "file": "data/pineapples.csv",
             "description": "The pineapple running gag is one of the most prominent running gags in the show. Every episode contains a pineapple, which are referenced here. Pineapple appearances are ranked according to their quality e.g. Appearance of a full pineapple is a 10, simple mention of a pineapple is a 1.",
             "type": "highest",
+            "high_value": 10,
             "high_color": "green",
             "low_color": "yellow"
         },

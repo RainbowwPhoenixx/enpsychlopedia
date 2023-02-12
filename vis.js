@@ -9,9 +9,9 @@ const y_labels = metadata.seasons.map(s => s.name);
 
 // set the dimensions and margins of the graph
 const margin = { top: 20, right: 20, bottom: 0, left: 50 },
-    square_size = 30,
-    width = square_size * x_labels.length - margin.left - margin.right,
-    height = square_size * y_labels.length - margin.top - margin.bottom;
+    square_size = 25,
+    width = square_size * x_labels.length,
+    height = square_size * y_labels.length;
 
 // append the svg object to the body of the page
 const svg = d3.select("#chart")
@@ -28,8 +28,7 @@ const svg = d3.select("#chart")
         .padding(0.05);
     svg.append("g")
         .style("font-size", 15)
-        .attr("transform", `translate(0, -15)`)
-        .call(d3.axisBottom(x).tickSize(0))
+        .call(d3.axisTop(x).tickSize(0))
         .select(".domain").remove()
 
     // Build Y scales and axis:
@@ -43,7 +42,6 @@ const svg = d3.select("#chart")
         .select(".domain").remove()
 
 async function set_page_vis(gag_info) {
-
     var description = d3.select("#description").html(gag_info.description);
 
     // Convert raw data into :
@@ -60,9 +58,22 @@ async function set_page_vis(gag_info) {
             description: d.description
         })
     })
-        
+
+    var max_value = 0;
+
+    if (gag_info.type === "highest") {
+        max_value = gag_info.high_value;
+    } else {
+        for (const season in data) {
+            for (const episode in data[season]) {
+                const ep_data = data[season][episode];
+                max_value = Math.max(max_value, ep_data.length);
+            }
+        }
+    }
+    
     var color_scale = d3.scaleLinear()
-        .domain([0, 10])
+        .domain([0, max_value])
         .range([gag_info.low_color, gag_info.high_color])
     
     svg.selectAll("rect").remove()
@@ -70,7 +81,6 @@ async function set_page_vis(gag_info) {
     for (const season in data) {
         for (const episode in data[season]) {
             const ep_data = data[season][episode];
-            
             
             if (ep_data.length > 0) {
                 const quality = gag_info.type === "highest" ? ep_data[0].quality : ep_data.length;
@@ -85,7 +95,7 @@ async function set_page_vis(gag_info) {
                     .classed("selectable", true)
                     .style("fill", color_scale(quality))
                     .style("opacity", 0.8)
-                    .on("click", () => description.html(ep_data[0].description))
+                    .on("click", () => description.html(generate_gag_list(season, episode, ep_data)))
             } else {
                 svg.append("rect")
                     .attr("x", x(+episode+1))
@@ -101,11 +111,25 @@ async function set_page_vis(gag_info) {
     }
 }
 
+function generate_gag_list(season, episode, ep_data) {
+    var res_html = "<h5>" + season + " Episode " + (+episode+1) + "</h5>\n<ul>\n";
+    for (const gag_instance of ep_data) {
+        res_html += "<li>";
+        if (gag_instance.timestamp !== "") {
+            res_html += "(" + gag_instance.timestamp + ") ";
+        }
+        res_html += gag_instance.description + "</li>\n";
+    }
+
+    return res_html + "\n</ul>";
+}
+
 document.querySelectorAll(".sidebar li").forEach(element => {
     element.addEventListener("click", () => {
         var gag_tag = element.getAttribute("data");
         if (gag_tag) {
             set_page_vis(metadata.gags[gag_tag]);
+            document.querySelector("#selected-gag").innerHTML = element.textContent
         }
     });
 });
