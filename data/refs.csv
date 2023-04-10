@@ -26,7 +26,7 @@ season,episode,timestamp,type,description
 1,6,,TV,Channel 206
 1,6,,???,I thought you'd never ask
 1,6,,Celebrity,Denzel Washington
-1,7,,Title,Ghostbusters
+1,7,,Movie,Ghostbusters
 1,7,,Celebrity,Pete Rose
 1,7,,Movie,Poltergeist
 1,7,,Movie,Poltergeist II
@@ -36,7 +36,9 @@ season,episode,timestamp,type,description
 1,7,,Movie,Hooper
 1,7,,Celebrity,Sally Field
 1,7,,Celebrity,Terry Bradshaw
-1,7,,Celebrity,Norma Rae
+1,7,,Movie,Norma Rae
+1,7,,TV,Night Gallery
+1,7,,TV,The Flying Nun
 1,8,,TV series,Columbo
 1,8,,TV series,Star Trek
 1,8,,Comic,The X-men

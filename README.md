@@ -14,6 +14,13 @@ This work is inspired by:
 * If you would like to add an instance of a running gag or suggest a new running gag, please open an issue. You can also PR if you are adding a lot of them at once.
 * Contributions to the site's code itself are welcome. However, this project is a way for me to learn web dev, so please avoid complete refactors or big changes.
 
+## Sources
+
+* https://psychusa.fandom.com/wiki/List_of_Pineapple_Appearances
+* http://psychphrences.net
+* https://github.com/damorb/psychphinder (for the subtitle data that is easy to search through)
+
+
 ## Planned features
 
 * Ability to see multiple descriptions per episode (and general looks improvements on the description)
