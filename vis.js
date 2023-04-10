@@ -5,7 +5,7 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 const metadata = await (await fetch("./data/meta.json")).json()
 
 const x_labels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
-const y_labels = metadata.seasons.map(s => s.name);
+const y_labels = Object.keys(metadata.seasons);
 
 // set the dimensions and margins of the graph
 const margin = { top: 20, right: 20, bottom: 0, left: 50 },
@@ -21,25 +21,25 @@ const svg = d3.select("#chart")
     .append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-    // Build X scales and axis:
-    const x = d3.scaleBand()
-        .range([0, width])
-        .domain(x_labels)
-        .padding(0.05);
-    svg.append("g")
-        .style("font-size", 15)
-        .call(d3.axisTop(x).tickSize(0))
-        .select(".domain").remove()
+// Build X scales and axis:
+const x = d3.scaleBand()
+    .range([0, width])
+    .domain(x_labels)
+    .padding(0.05);
+svg.append("g")
+    .style("font-size", 15)
+    .call(d3.axisTop(x).tickSize(0))
+    .select(".domain").remove()
 
-    // Build Y scales and axis:
-    const y = d3.scaleBand()
-        .range([0, height])
-        .domain(y_labels)
-        .padding(0.05);
-    svg.append("g")
-        .style("font-size", 15)
-        .call(d3.axisLeft(y).tickSize(0))
-        .select(".domain").remove()
+// Build Y scales and axis:
+const y = d3.scaleBand()
+    .range([0, height])
+    .domain(y_labels)
+    .padding(0.05);
+svg.append("g")
+    .style("font-size", 15)
+    .call(d3.axisLeft(y).tickSize(0))
+    .select(".domain").remove()
 
 async function set_page_vis(gag_info) {
     var description = d3.select("#description").html(gag_info.description);
@@ -47,12 +47,12 @@ async function set_page_vis(gag_info) {
     // Convert raw data into :
     // data[season][episode] = list of instances of gag;
     var data = {};
-    for (const [idx, season_name] of y_labels.entries()) {
-        data[season_name] = Array.from({length: metadata.seasons[idx].episodes}, () => []);
+    for (const season_name of y_labels) {
+        data[season_name] = Array.from({length: metadata.seasons[season_name].length}, () => []);
     }
 
     await d3.csv(gag_info.file, (d) => {
-        data[metadata.seasons[+d.season-1].name][+d.episode-1].push({
+        data[y_labels[+d.season-1]][+d.episode-1].push({
             timestamp: d.timestamp,
             quality: +d.quality,
             description: d.description
@@ -83,7 +83,7 @@ async function set_page_vis(gag_info) {
             const ep_data = data[season][episode];
             
             if (ep_data.length > 0) {
-                const quality = gag_info.type === "highest" ? ep_data[0].quality : ep_data.length;
+                const quality = gag_info.type === "highest" ? Math.max(...ep_data.map(e => e.quality)) : ep_data.length;
                 
                 svg.append("rect")
                     .attr("x", x(+episode+1))
@@ -112,7 +112,7 @@ async function set_page_vis(gag_info) {
 }
 
 function generate_gag_list(season, episode, ep_data) {
-    var res_html = "<h5>" + season + " Episode " + (+episode+1) + "</h5>\n<ul>\n";
+    var res_html = "<h5>" + season + " Episode " + (+episode+1) + ": " + metadata.seasons[season][+episode] + "</h5>\n<ul>\n";
     for (const gag_instance of ep_data) {
         res_html += "<li>";
         if (gag_instance.timestamp !== "") {
