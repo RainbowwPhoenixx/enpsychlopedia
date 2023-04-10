@@ -122,8 +122,7 @@
             "Dead Air",
             "Nip and Suck It",
             "No Trout About It",
-            "Psych: The Musical (1)",
-            "Psych: The Musical (2)"
+            "Psych: The Musical"
         ],
         "Season 8": [
             "Lock, Stock, Some Smoking Barrels and Burton Guster's Goblet of Fire",
@@ -146,7 +145,7 @@
     "gags": {
         "pineapples": {
             "file": "data/pineapples.csv",
-            "description": "The pineapple running gag is one of the most prominent running gags in the show. Every episode contains a pineapple, which are referenced here.\n Pineapples are reanked acoording to the following scale: <ol><li>(Yellow) Simple mention of a pineapple</li><li>An image of a pineapple</li><li>A 3D pineapple</li><li>A real pineapple, but cut or as part of another food</li><li>(Green) A real, fullsized, uncut pineapple</li></pl>",
+            "description": "The pineapple running gag is one of the most prominent running gags in the show. Every episode contains a pineapple, which are referenced here.\n Pineapples are ranked according to the following scale: <ol><li>(Yellow) Simple mention of a pineapple</li><li>An image of a pineapple</li><li>A 3D pineapple</li><li>A real pineapple, but cut or as part of another food</li><li>(Green) A real, fullsized, uncut pineapple</li></pl>",
             "type": "highest",
             "high_value": 5,
             "high_color": "green",
@@ -155,6 +154,34 @@
         "references": {
             "file": "data/refs.csv",
             "description": "The show contains many pop culture references.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "you-know-thats-right": {
+            "file": "data/you-know-thats-right.csv",
+            "description": "'You know that's right' is a sentence said in many episodes, mostly by Gus, but sometimes by other characters.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "i-cant-do-this-with-you": {
+            "file": "data/i-cant-do-this-with-you.csv",
+            "description": "'I can't do this with you right now' is a sentence said in many episodes, mostly by shawn.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "i-would-rather": {
+            "file": "data/i-would-rather.csv",
+            "description": "'I would rather...' is a sentence said occasionally by Lassiter, often when someone asks him for a hug.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "dobson": {
+            "file": "data/dobson.csv",
+            "description": "Dobson is an officer in the SBPD that is often referenced but never showed, except in the series finale. He played by none other than Val Kilmer, who was the subject of another runner.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"

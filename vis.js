@@ -118,7 +118,7 @@ function generate_gag_list(season, episode, ep_data) {
         if (gag_instance.timestamp !== "") {
             res_html += "(" + gag_instance.timestamp + ") ";
         }
-        res_html += gag_instance.description + "</li>\n";
+        res_html += "<pre>" + gag_instance.description + "</pre></li>\n";
     }
 
     return res_html + "\n</ul>";

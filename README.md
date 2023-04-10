@@ -23,8 +23,7 @@ This work is inspired by:
 
 ## Planned features
 
-* Ability to see multiple descriptions per episode (and general looks improvements on the description)
-* Ability to see the list of running gags per episode, so that this website can act as a guide for a rewatch
+* Ability to see the list of running gags per episode, sorted by timestamp, so that this website can act as a guide for a rewatch
     * Impl #1: Go through all the running gags CSVs get all the gags for a given episode (very bad)
     * Impl #2: Have a script automatically generate episode CSVs from the running gag CSVs (slighly annoying)
     * Impl #3: Have the gags be collected in a database (most efficient but impossible with github-pages)
