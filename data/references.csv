@@ -1,4 +1,4 @@
-season,episode,timestamp,type,description
+season,episode,timestamp,type,name,link,description
 1,1,,Board game,Monopoly
 1,1,,Movie,I'll be back
 1,2,,Celebrity,Park Hyatt
@@ -55,7 +55,7 @@ season,episode,timestamp,type,description
 1,9,,Celebrity,James Earl Jones
 1,9,,???,Sherlock Holmes (is that a reference? cause I'd consider that an idiom)
 1,10,,Celebrity,Don Cheadle
-1,10,,Movie,Idk some movie with Danny Zukko, Travolta, and Keinecke
+1,10,,Movie,"Idk some movie with Danny Zukko, Travolta, and Keinecke"
 1,10,,Celebrity,Prince
 1,11,,Movie,In the Heat of the Night
 1,11,,TV,Queer Eye
@@ -76,6 +76,7 @@ season,episode,timestamp,type,description
 1,15,,Movie,Star Wars (Lando)
 1,15,,TV,The Cosby Show
 1,15,,Movie,Silence of the Lambs
+2,1,30:41,Music,Here Comes The Hotstepper - Ini Kamoze,https://youtu.be/w0N4twV28Mw,"<pre>Shawn: Gus, I'm a lyrical gangster.</pre>"
 2,1,,TV,American Idol
 2,1,,Celebrity,Michael Jackson
 2,1,,Celebrity,Billy Ocean

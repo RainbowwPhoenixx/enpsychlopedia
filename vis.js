@@ -41,7 +41,8 @@ svg.append("g")
     .call(d3.axisLeft(y).tickSize(0))
     .select(".domain").remove()
 
-async function set_page_vis(gag_info) {
+async function set_page_vis(gag_name) {
+    const gag_info = metadata.gags[gag_name]
     var description = d3.select("#description").html(gag_info.description);
 
     // Convert raw data into :
@@ -51,12 +52,8 @@ async function set_page_vis(gag_info) {
         data[season_name] = Array.from({length: metadata.seasons[season_name].length}, () => []);
     }
 
-    await d3.csv(gag_info.file, (d) => {
-        data[y_labels[+d.season-1]][+d.episode-1].push({
-            timestamp: d.timestamp,
-            quality: +d.quality,
-            description: d.description
-        })
+    await d3.csv(`data/${gag_name}.csv`, (d) => {
+        data[y_labels[+d.season-1]][+d.episode-1].push(d)
     })
 
     var max_value = 0;
@@ -112,13 +109,17 @@ async function set_page_vis(gag_info) {
 }
 
 function generate_gag_list(season, episode, ep_data) {
-    var res_html = "<h5>" + season + " Episode " + (+episode+1) + ": " + metadata.seasons[season][+episode] + "</h5>\n<ul>\n";
+    var res_html = `<h5>${season} Episode ${+episode + 1}: ${metadata.seasons[season][+episode]}</h5>\n<ul>\n`;
     for (const gag_instance of ep_data) {
         res_html += "<li>";
         if (gag_instance.timestamp !== "") {
-            res_html += "(" + gag_instance.timestamp + ") ";
+            res_html += `(${gag_instance.timestamp}) `;
         }
-        res_html += "<pre>" + gag_instance.description + "</pre></li>\n";
+        if (gag_instance.type && gag_instance.type != "") {
+            let link = (gag_instance.link && gag_instance.link) ? ` href=${gag_instance.link}` : "";
+            res_html += `${gag_instance.type}: <a${link}>${gag_instance.name}</a>`;
+        }
+        res_html += gag_instance.description + "</li>\n";
     }
 
     return res_html + "\n</ul>";
@@ -128,10 +129,10 @@ document.querySelectorAll(".sidebar li").forEach(element => {
     element.addEventListener("click", () => {
         var gag_tag = element.getAttribute("data");
         if (gag_tag) {
-            set_page_vis(metadata.gags[gag_tag]);
+            set_page_vis(gag_tag);
             document.querySelector("#selected-gag").innerHTML = element.textContent
         }
     });
 });
 
-set_page_vis(metadata.gags.pineapples)
+set_page_vis("pineapples")
