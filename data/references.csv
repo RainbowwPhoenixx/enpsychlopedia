@@ -31,65 +31,84 @@ season,episode,timestamp,type,name,link,description
 1,7,,Movie,Poltergeist
 1,7,,Movie,Poltergeist II
 1,7,,Movie,Gremlins
-1,7,,Movie,Jaws
-1,7,,Movie,Smokey and the Bandit
-1,7,,Movie,Hooper
-1,7,,Celebrity,Sally Field
-1,7,,Celebrity,Terry Bradshaw
-1,7,,Movie,Norma Rae
+1,7,23:10,Movie,Jaws,???,"<pre>Shawn: Martin Brody? Isn't that Roy Scheider's character from Jaws?</pre>"
+1,7,27:35,TV,The Flying Nun
+1,7,27:38,Movie,Smokey and the Bandit
+1,7,27:50,Movie,Hooper
+1,7,27:55,Celebrity,Sally Field
+1,7,28:00,Celebrity,Terry Bradshaw
+1,7,28:04,Movie,Norma Rae
 1,7,,TV,Night Gallery
-1,7,,TV,The Flying Nun
+1,8,11:55,TV series,Star Trek
+1,8,16:35,Comic,The X-men
+1,8,19:30,Movie,Star Trek IV: The Voyage Home (is this a fictional movie?)
+1,8,20:25,Celebrity,Johnny Depp
+1,8,20:35,Celebrity,Kate Moss 
+1,8,20:40,Celebrity,Steven Dorff
+1,8,21:30,Celebrity,Keith Moon
+1,8,23:00,TV Series,Family Matters
 1,8,,TV series,Columbo
-1,8,,TV series,Star Trek
-1,8,,Comic,The X-men
-1,8,,Celebrity,Johnny Depp
-1,8,,Celebrity,Kate Moss
-1,8,,Celebrity,Steven Dorff
-1,8,,Celebrity,Keith Moon
 1,8,,???,The rest of em is confusing
-1,9,,Celebrity,Bruce Lee
-1,9,,TV series,When Animals Attack
-1,9,,Movie,The Lion King
-1,9,,Movie,Star Wars
-1,9,,???,Rappaport
-1,9,,Celebrity,James Earl Jones
-1,9,,???,Sherlock Holmes (is that a reference? cause I'd consider that an idiom)
-1,10,,Celebrity,Don Cheadle
+1,9,2:53,Celebrity,Bruce Lee
+1,9,13:25,TV series,When Animals Attack,"<pre>Henry: Of course it's coincidental Shawn! But it doesn't make it murder.
+Shawn: No, it makes it an episode of When Animals Attack: Santa Barbara.</pre>"
+1,9,15:10,Movie,The Lion King,"<pre>Shawn: Simba, I am your father.
+Gus: I don't think Mufasa said that.</pre>"
+1,9,15:15,Movie,Star Wars
+1,9,15:15,Movie,I'm not Rappaport,"The movie is based on a play, but Gus references Ossie Davies so we can assume they are talking about the movie."
+1,9,15:15,Celebrity,James Earl Jones
+1,10,14:25,Celebrity,Vincent Gallo
+1,10,16:15,Celebrity,Don Cheadle
 1,10,,Movie,"Idk some movie with Danny Zukko, Travolta, and Keinecke"
-1,10,,Celebrity,Prince
+1,10,39:00,Celebrity,Prince
+1,11,11:35,TV,Queer Eye
 1,11,,Movie,In the Heat of the Night
-1,11,,TV,Queer Eye
 1,11,,Celebrity,Simon Cowell
-1,11,,Celebrity,John Wayne
-1,11,,Movie,Rio Bravo
-1,11,,Music,Bee Gees
+1,11,31:15,Celebrity,John Wayne
+1,11,31:15,Movie,Rio Bravo
+1,11,38:35,Music,Bee Gees
+1,11,39:10,TV Series,Scooby-Doo,"<pre>Shawn: And they would have gotten away with it too folks. If it wasn't for their last victim.</pre>"
+1,12,10:25,Music,Man in the Mirror - Michael Jackson
+1,12,26:35,TV,Law and Order
 1,12,,???,Space Mountain
-1,12,,TV,Law and Order
-1,13,,Music,Whitesnake
-1,13,,???,Airwolf
+1,13,9:55,Music,Whitesnake
+1,13,10:00,???,Airwolf
+1,13,19:35,Movie,The Fugitive
+1,13,19:40,TV Series,House MD
 1,13,,???,"Homina, Homina, Homina, Homina, Ricky, Enrique, Geraldo, Menudo, Richie"
 1,13,,TV,The Twilight Zone
+1,14,39:45,Movie,Passenger 57
 1,14,,Movie,Lost Boys
 1,14,,Celebrity,Matt Lauer
 1,14,,Celebrity,Diane Lane
-1,14,,Movie,Passenger 57
+1,15,10:40,TV,The Cosby Show
 1,15,,Movie,Star Wars (Lando)
-1,15,,TV,The Cosby Show
 1,15,,Movie,Silence of the Lambs
+2,1,0:05,Celebrity,Michael Jackson
+2,1,0:10,Celebrity,Billy Ocean
+2,1,0:15,Celebrity,Roland Orzabal
+2,1,15:55,TV,Everybody Loves Raymond
+2,1,18:05,Movie,Rainman
+2,1,18:10,Music,Prince
+2,1,18:45,TV,Mr Bean
+2,1,21:10,Music,Hall and Oates
 2,1,30:41,Music,Here Comes The Hotstepper - Ini Kamoze,https://youtu.be/w0N4twV28Mw,"<pre>Shawn: Gus, I'm a lyrical gangster.</pre>"
+2,1,39:18,Celebrity,Ricky Martin
 2,1,,TV,American Idol
-2,1,,Celebrity,Michael Jackson
-2,1,,Celebrity,Billy Ocean
-2,1,,Celebrity,Roland Orzabal
 2,1,,Music,Shout by Tears for Fears
 2,1,,Music,Take on Me
 2,1,,Music,Yankee Rose by David Lee Roth
-2,1,,TV,Everybody Loves Raymond
-2,1,,Movie,Rainman
-2,1,,Music,Prince
-2,1,,TV,Mr Bean
-2,1,,Music,Hall and Oates
 2,1,,Celebrity,Keyser Soze
 2,1,,Movie,Whatever has count chocula in it
-2,1,,Celebrity,Ricky Martin
-2,2,,Celebrity,Michael Jackson
+2,2,16:35,Celebrity,Michael Jackson
+2,2,22:15,Celebrity,Sigourney Weaver
+2,2,22:15,Movie,Aliens
+2,2,22:15,Movie,Alien
+2,2,22:20,Movie,Alien: Resurrection
+2,2,22:20,Celebrity,Shia LaBoeuf
+2,2,22:25,Celebrity,Jon Voight
+2,2,22:30,Movie,Anaconda
+2,2,22:35,Movie,Gorillas in the Mist
+2,2,22:35,Movie,Death and the Maiden
+2,2,22:35,Movie,Half Moon Street
+2,7,36:10,Song,The Real Slim Shady - Eminem,"<pre>Shawn: Will the real Kirk Gödel please stand up?</pre>"
