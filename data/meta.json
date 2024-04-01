@@ -192,10 +192,118 @@
             "high_color": "blue",
             "low_color": "lightgray"
         },
+        "ive-heard-it-both-ways": {
+            "description": "One of the most iconic Psych runners, often said when Shawn does not want to admit he's wrong. The songs in the musical episode are counted as one instance of the runner each.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "on-the-inside": {
+            "description": "",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "im-proud-of-you": {
+            "description": "A very late runner where Shawn and/or Gus say 'I'm proud of you' while making a gesture with the index finger.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "suck-it": {
+            "description": "You can suck it.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
         "pluto": {
             "description": "This sentence is Gus' go-to pickup line.",
             "type": "most",
             "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "this-is-my-partner": {
+            "description": "Whenever Shawn introduces Gus and himself, he follows the pattern 'Hi, my name is Shawn Spencer and this is my partner ...' where he makes up a silly nickname for Gus.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "super-smeller": {
+            "description": "Gus' nose is sometimes nicknamed as the super-smeller or super-sniffer, because of his gift for identifying smells.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "a-player-named-gus": {
+            "description": "This gag compounds several runners about Gus' pick up techniques, such as pluto, the business card, helloooo, and the nose flick.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "meta-jokes": {
+            "description": "This groups jokes that take a jab at the show itself.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "fist-bump": {
+            "description": "Every fist bump, including ones that go unanswered.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "11-point-turn": {
+            "description": "Gus' million-point turns.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "culprit-dating": {
+            "description": "Why do they hit on the culprits so often in this show?",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "point-at-each-other": {
+            "description": "Shawn and Gus point at each other.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "sympathetic-crier": {
+            "description": "Gus is a sympatehtic crier",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "boneless": {
+            "description": "Don't you dare go boneless on me Shawn!",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "gus-is-mj": {
+            "description": "Every time gus does a MJ impression.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "stern-bush": {
+            "description": "Lassiter's sternum bush is a weapon.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "callbacks": {
+            "description": "Callbacks to previous episodes.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "empty": {
+            "description": "Oops! There is no data for this gag yet. If you would like to contribute it, feel free to make a Pull Request.",
+            "type": "most",
+            "high_color": "lightgray",
             "low_color": "lightgray"
         }
     }

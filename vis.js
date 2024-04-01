@@ -49,12 +49,12 @@ async function set_page_vis(gag_name) {
     // data[season][episode] = list of instances of gag;
     var data = {};
     for (const season_name of y_labels) {
-        data[season_name] = Array.from({length: metadata.seasons[season_name].length}, () => []);
+        data[season_name] = Array.from({ length: metadata.seasons[season_name].length }, () => []);
     }
 
     await d3.csv(`data/${gag_name}.csv`, (d) => {
-        data[y_labels[+d.season-1]][+d.episode-1].push(d)
-    })
+        data[y_labels[+d.season - 1]][+d.episode - 1].push(d)
+    }).catch((err) => { set_page_vis("empty") })
 
     var max_value = 0;
 
@@ -68,22 +68,22 @@ async function set_page_vis(gag_name) {
             }
         }
     }
-    
+
     var color_scale = d3.scaleLinear()
         .domain([0, max_value])
         .range([gag_info.low_color, gag_info.high_color])
-    
+
     svg.selectAll("rect").remove()
-    
+
     for (const season in data) {
         for (const episode in data[season]) {
             const ep_data = data[season][episode];
-            
+
             if (ep_data.length > 0) {
                 const quality = gag_info.type === "highest" ? Math.max(...ep_data.map(e => e.quality)) : ep_data.length;
-                
+
                 svg.append("rect")
-                    .attr("x", x(+episode+1))
+                    .attr("x", x(+episode + 1))
                     .attr("y", y(season))
                     .attr("rx", 4)
                     .attr("ry", 4)
@@ -95,7 +95,7 @@ async function set_page_vis(gag_name) {
                     .on("click", () => description.html(generate_gag_list(season, episode, ep_data)))
             } else {
                 svg.append("rect")
-                    .attr("x", x(+episode+1))
+                    .attr("x", x(+episode + 1))
                     .attr("y", y(season))
                     .attr("rx", 4)
                     .attr("ry", 4)
@@ -125,6 +125,7 @@ function generate_gag_list(season, episode, ep_data) {
     return res_html + "\n</ul>";
 }
 
+// Make the buttons work
 document.querySelectorAll(".sidebar li").forEach(element => {
     element.addEventListener("click", () => {
         var gag_tag = element.getAttribute("data");
@@ -135,4 +136,5 @@ document.querySelectorAll(".sidebar li").forEach(element => {
     });
 });
 
+// Fill the main part of the page
 set_page_vis("pineapples")
