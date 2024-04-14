@@ -43,7 +43,6 @@ svg.append("g")
 
 async function set_page_vis(gag_name) {
     const gag_info = metadata.gags[gag_name]
-    var description = d3.select("#description").html(gag_info.description);
 
     // Convert raw data into :
     // data[season][episode] = list of instances of gag;
@@ -54,8 +53,9 @@ async function set_page_vis(gag_name) {
 
     await d3.csv(`data/${gag_name}.csv`, (d) => {
         data[y_labels[+d.season - 1]][+d.episode - 1].push(d)
-    }).catch((err) => { set_page_vis("empty") })
+    }).catch(() => { set_page_vis("empty") })
 
+    var description = d3.select("#description").html(gag_info.description);
     var max_value = 0;
 
     if (gag_info.type === "highest") {
@@ -92,7 +92,13 @@ async function set_page_vis(gag_name) {
                     .classed("selectable", true)
                     .style("fill", color_scale(quality))
                     .style("opacity", 0.8)
-                    .on("click", () => description.html(generate_gag_list(season, episode, ep_data)))
+                    .on("click", (event) => {
+                        description.html(generate_gag_list(season, episode, ep_data))
+                        document.querySelectorAll(".selected-episode").forEach(element => {
+                            element.classList.remove("selected-episode")
+                        });
+                        event.currentTarget.classList.add("selected-episode")
+                    })
             } else {
                 svg.append("rect")
                     .attr("x", x(+episode + 1))
@@ -131,7 +137,7 @@ document.querySelectorAll(".sidebar li").forEach(element => {
         var gag_tag = element.getAttribute("data");
         if (gag_tag) {
             set_page_vis(gag_tag);
-            document.querySelector("#selected-gag").innerHTML = element.textContent
+            document.getElementById("selected-gag").innerHTML = element.textContent
         }
     });
 });

@@ -1,3 +1,10 @@
+/* Fonts */
+@font-face {
+    font-family: psychFont;
+    src: url(./American-Typewriter-Bold.ttf);
+}
+
+
 html {
     width: 100%;
     height: 100%;
@@ -65,8 +72,13 @@ body {
 
 /* Elements marked psych are stylised to look like the psych logo */
 .psych {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: psychFont;
     color: rgb(69, 205, 69);
+    letter-spacing: -0.1em;
+    font-size: 35px;
+    
+    position: relative;
+    right: .05em;
 }
 
 #about {
@@ -97,8 +109,13 @@ body {
     flex: 1;
 }
 
-#chart .selectable:hover, #selected {
+#chart .selectable:hover {
     stroke:black;
+}
+
+.selected-episode {
+    stroke:black;
+    stroke-width: 2px;
 }
 
 pre {
