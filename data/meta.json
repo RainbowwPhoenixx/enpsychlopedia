@@ -300,6 +300,12 @@
             "high_color": "blue",
             "low_color": "lightgray"
         },
+        "intro": {
+            "description": "Moments that have been part of an intro at some point or another.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
         "empty": {
             "description": "Oops! There is no data for this gag yet. If you would like to contribute it, feel free to make a Pull Request.",
             "type": "most",

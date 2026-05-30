@@ -73,15 +73,15 @@ async function set_page_vis(gag_name) {
         .domain([0, max_value])
         .range([gag_info.low_color, gag_info.high_color])
 
+    var description = d3.select("#description");
+
     svg.selectAll("rect").remove()
 
     for (const season in data) {
         for (const episode in data[season]) {
             const ep_data = data[season][episode];
 
-            if (ep_data.length > 0) {
-                const quality = gag_info.type === "highest" ? Math.max(...ep_data.map(e => e.quality)) : ep_data.length;
-
+            let little_square =
                 svg.append("rect")
                     .attr("x", x(+episode + 1))
                     .attr("y", y(season))
@@ -89,9 +89,13 @@ async function set_page_vis(gag_name) {
                     .attr("ry", 4)
                     .attr("width", x.bandwidth())
                     .attr("height", y.bandwidth())
-                    .classed("selectable", true)
+                    .style("opacity", 0.8);
+
+            if (ep_data.length > 0) {
+                const quality = gag_info.type === "highest" ? Math.max(...ep_data.map(e => e.quality)) : ep_data.length;
+
+                little_square.classed("selectable", true)
                     .style("fill", color_scale(quality))
-                    .style("opacity", 0.8)
                     .on("click", (event) => {
                         description.html(generate_gag_list(season, episode, ep_data))
                         document.querySelectorAll(".selected-episode").forEach(element => {
@@ -100,15 +104,7 @@ async function set_page_vis(gag_name) {
                         event.currentTarget.classList.add("selected-episode")
                     })
             } else {
-                svg.append("rect")
-                    .attr("x", x(+episode + 1))
-                    .attr("y", y(season))
-                    .attr("rx", 4)
-                    .attr("ry", 4)
-                    .attr("width", x.bandwidth())
-                    .attr("height", y.bandwidth())
-                    .style("fill", "darkgrey")
-                    .style("opacity", 0.8)
+                little_square.style("fill", "darkgrey")
             }
         }
     }
