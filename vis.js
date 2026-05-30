@@ -132,11 +132,32 @@ document.querySelectorAll(".sidebar li").forEach(element => {
     element.addEventListener("click", () => {
         var gag_tag = element.getAttribute("data");
         if (gag_tag) {
-            set_page_vis(gag_tag);
-            document.getElementById("selected-gag").innerHTML = element.textContent
+            navigate(element.textContent, gag_tag, true)
         }
     });
 });
 
-// Fill the main part of the page
-set_page_vis("pineapples")
+function navigate(gag_title, gag_name, set_history) {
+    set_page_vis(gag_name);
+    document.getElementById("selected-gag").innerHTML = gag_title
+    if (set_history) {
+        window.history.pushState({url: gag_name, title: gag_title}, gag_name, gag_name)
+    }
+}
+
+// Add listener for the history navigation buttons
+window.addEventListener("popstate", (e) => {
+    if(e.state){
+        navigate(e.state.title, e.state.url, false)
+    }
+});
+
+// If we got redirected from 404, go to the given page, else navigate to pineapples
+const redirect_url = new URLSearchParams(document.location.search).get("url")
+console.log(redirect_url)
+if (redirect_url != null && metadata.gags[redirect_url] != null) {
+    navigate(metadata.gags[redirect_url].title, redirect_url, true)
+} else {
+    // Fill the main part of the page
+    navigate("Pineapples", "pineapples", true)
+}

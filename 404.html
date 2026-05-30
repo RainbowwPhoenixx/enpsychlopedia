@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+</head>
+
+<body>
+    <script>
+        // Capture the current URL path
+        var path = window.location.pathname;
+
+        var prefix = "";
+        if (path.startsWith("/enpsychlopedia")) {
+            prefix = "/enpsychlopedia"
+            path = path.replaceAll("enpsychlopedia/", "")
+        }
+        path = path.replaceAll("/", "")
+
+        // Redirect to index.html with the path as a query parameter
+        window.location.href = `${window.location.origin}${prefix}/index.html?url=${encodeURIComponent(path)}`;
+
+        // TODO: don't redirect if the pathname is not a gag?
+    </script>
+</body>
+
+</html>

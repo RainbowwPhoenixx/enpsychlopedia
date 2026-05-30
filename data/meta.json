@@ -144,6 +144,7 @@
     },
     "gags": {
         "pineapples": {
+            "title": "Pineapples",
             "description": "The pineapple running gag is one of the most prominent running gags in the show. Every episode contains a pineapple, which are referenced here.\n Pineapples are ranked according to the following scale: <ol><li>(Yellow) Simple mention of a pineapple</li><li>An image of a pineapple</li><li>A 3D pineapple</li><li>A real pineapple, but cut or as part of another food</li><li>(Green) A real, fullsized, uncut pineapple</li></pl>",
             "type": "highest",
             "high_value": 5,
@@ -151,162 +152,189 @@
             "low_color": "yellow"
         },
         "references": {
+            "title": "Pop culture references",
             "description": "The show contains many pop culture references.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "you-know-thats-right": {
+            "title": "You know that's right",
             "description": "'You know that's right' is a sentence said in many episodes, mostly by Gus, but sometimes by other characters.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "i-cant-do-this-with-you": {
+            "title": "I can't do this with you right now",
             "description": "'I can't do this with you right now' is a sentence said in many episodes, mostly by shawn.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "i-would-rather": {
+            "title": "I would rather...",
             "description": "'I would rather...' is a sentence said occasionally by Lassiter, often when someone asks him for a hug.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
-        "dobson": {
-            "description": "Dobson is an officer in the SBPD that is often referenced but never showed, except in the series finale. He played by none other than Val Kilmer, who was the subject of another runner.",
+        "this-is-my-partner": {
+            "title": "My name is Shawn Spencer and this is my partner...",
+            "description": "Whenever Shawn introduces Gus and himself, he follows the pattern 'Hi, my name is Shawn Spencer and this is my partner ...' where he makes up a silly nickname for Gus.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
-        "out-of-your-damn-mind": {
-            "description": "'You must be out of your damn mind' is a regular on psych, most often said by Gus after some ludicrous suggestion from Shawn.",
+        "pluto": {
+            "title": "You heard about pluto?",
+            "description": "This sentence is Gus' go-to pickup line.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "agree-to-disagree": {
+            "title": "Agree to disagree",
             "description": "'Agree to disagree' is an iconic Psych sentence, despite its relatively lower appearance rate.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "ive-heard-it-both-ways": {
+            "title": "I've heard it both ways",
             "description": "One of the most iconic Psych runners, often said when Shawn does not want to admit he's wrong. The songs in the musical episode are counted as one instance of the runner each.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
+        "dobson": {
+            "title": "Dobson!",
+            "description": "Dobson is an officer in the SBPD that is often referenced but never showed, except in the series finale. He played by none other than Val Kilmer, who was the subject of another runner.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "out-of-your-damn-mind": {
+            "title": "You must be out of your damn mind!",
+            "description": "'You must be out of your damn mind' is a regular on psych, most often said by Gus after some ludicrous suggestion from Shawn.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
         "on-the-inside": {
+            "title": "On the inside!",
             "description": "",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "im-proud-of-you": {
+            "title": "I'm proud of you",
             "description": "A very late runner where Shawn and/or Gus say 'I'm proud of you' while making a gesture with the index finger.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "suck-it": {
+            "title": "Suck it!",
             "description": "You can suck it.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
-        "pluto": {
-            "description": "This sentence is Gus' go-to pickup line.",
-            "type": "most",
-            "high_color": "blue",
-            "low_color": "lightgray"
-        },
-        "this-is-my-partner": {
-            "description": "Whenever Shawn introduces Gus and himself, he follows the pattern 'Hi, my name is Shawn Spencer and this is my partner ...' where he makes up a silly nickname for Gus.",
-            "type": "most",
-            "high_color": "blue",
-            "low_color": "lightgray"
-        },
-        "super-smeller": {
-            "description": "Gus' nose is sometimes nicknamed as the super-smeller or super-sniffer, because of his gift for identifying smells.",
-            "type": "most",
-            "high_color": "blue",
-            "low_color": "lightgray"
-        },
         "a-player-named-gus": {
+            "title": "A player named Gus",
             "description": "This gag compounds several runners about Gus' pick up techniques, such as pluto, the business card, helloooo, and the nose flick.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
-        "meta-jokes": {
-            "description": "This groups jokes that take a jab at the show itself.",
-            "type": "most",
-            "high_color": "blue",
-            "low_color": "lightgray"
-        },
         "fist-bump": {
+            "title": "Fist bump",
             "description": "Every fist bump, including ones that go unanswered.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "11-point-turn": {
+            "title": "11-point turn",
             "description": "Gus' million-point turns.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "culprit-dating": {
+            "title": "Someone dates the culprit",
             "description": "Why do they hit on the culprits so often in this show?",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "point-at-each-other": {
+            "title": "Shawn and gus point at each other",
             "description": "Shawn and Gus point at each other.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "sympathetic-crier": {
+            "title": "Gus is a sympathetic crier",
             "description": "Gus is a sympatehtic crier",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "boneless": {
+            "title": "Going boneless",
             "description": "Don't you dare go boneless on me Shawn!",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "gus-is-mj": {
+            "title": "Gus does a Michael Jackson impression",
             "description": "Every time gus does a MJ impression.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
+        "super-smeller": {
+            "title": "The super-smeller",
+            "description": "Gus' nose is sometimes nicknamed as the super-smeller or super-sniffer, because of his gift for identifying smells.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
         "stern-bush": {
+            "title": "The stern bush",
             "description": "Lassiter's sternum bush is a weapon.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
+        "meta-jokes": {
+            "title": "Meta jokes",
+            "description": "This groups jokes that take a jab at the show itself.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
         "callbacks": {
+            "title": "Callbacks",
             "description": "Callbacks to previous episodes.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "intro": {
+            "title": "Intro Spotted!",
             "description": "Moments that have been part of an intro at some point or another.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
         },
         "empty": {
+            "title": "",
             "description": "Oops! There is no data for this gag yet. If you would like to contribute it, feel free to make a Pull Request.",
             "type": "most",
             "high_color": "lightgray",
