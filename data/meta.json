@@ -118,7 +118,7 @@
             "Right Turn Or Left For Dead",
             "Juliet Wears The Pantsuit",
             "Santa Barbarian Candidate",
-            "Office SPACE",
+            "Office Space",
             "Dead Air",
             "Nip and Suck It",
             "No Trout About It",
@@ -223,7 +223,7 @@
         },
         "on-the-inside": {
             "title": "On the inside!",
-            "description": "",
+            "description": "When they have a guy 'on the inside'. If they are doing the voice, the words will be in italics.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"
@@ -238,6 +238,13 @@
         "suck-it": {
             "title": "Suck it!",
             "description": "You can suck it.",
+            "type": "most",
+            "high_color": "blue",
+            "low_color": "lightgray"
+        },
+        "gus-dont-be": {
+            "title": "Gus, don't be a...",
+            "description": "Shawn often tries to get Gus to comply by comparing him with ridiculous things.",
             "type": "most",
             "high_color": "blue",
             "low_color": "lightgray"

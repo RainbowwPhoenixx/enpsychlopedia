@@ -9,7 +9,7 @@ const y_labels = Object.keys(metadata.seasons);
 
 // set the dimensions and margins of the graph
 const margin = { top: 20, right: 20, bottom: 0, left: 50 },
-    square_size = 25,
+    square_size = 30,
     width = square_size * x_labels.length,
     height = square_size * y_labels.length;
 
