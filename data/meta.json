@@ -142,6 +142,42 @@
             "Psych 3: This Is Gus"
         ]
     },
+    "gag_sidebar": {
+        "pineapples": [],
+        "references": [],
+        "Recurring quotes": [
+            "agree-to-disagree",
+            "dobson",
+            "gus-dont-be",
+            "i-cant-do-this-with-you",
+            "i-would-rather",
+            "im-proud-of-you",
+            "ive-heard-it-both-ways",
+            "on-the-inside",
+            "out-of-your-damn-mind",
+            "pluto",
+            "this-is-my-partner",
+            "suck-it",
+            "you-know-thats-right"
+        ],
+        "Recurring actions": [
+            "11-point-turn",
+            "a-player-named-gus",
+            "boneless",
+            "culprit-dating",
+            "fist-bump",
+            "gus-is-mj",
+            "point-at-each-other",
+            "super-smeller",
+            "sympathetic-crier"
+        ],
+        "Other runners": [
+            "callbacks",
+            "intro",
+            "meta-jokes",
+            "stern-bush"
+        ]
+    },
     "gags": {
         "pineapples": {
             "title": "Pineapples",

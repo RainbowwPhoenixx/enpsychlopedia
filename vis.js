@@ -127,15 +127,28 @@ function generate_gag_list(season, episode, ep_data) {
     return res_html + "\n</ul>";
 }
 
-// Make the buttons work
-document.querySelectorAll(".sidebar li").forEach(element => {
-    element.addEventListener("click", () => {
-        var gag_tag = element.getAttribute("data");
-        if (gag_tag) {
-            navigate(element.textContent, gag_tag, true)
+function generate_sidebar() {
+    var generate_li = function (gag_tag) {
+        return `<li data="${gag_tag}">${metadata.gags[gag_tag].title}</li>\n`
+    };
+    var sidebar_data = metadata.gag_sidebar
+    var res_html = ''
+    for (const heading in sidebar_data) {
+        if (sidebar_data[heading].length == 0) {
+            res_html += generate_li(heading)
+        } else {
+            res_html += `<details>\n<summary>${heading}</summary><ul>\n`
+            for (const tag of sidebar_data[heading]) {
+                res_html += generate_li(tag)
         }
-    });
-});
+            res_html += "</ul></details>\n"
+        }
+    }
+
+    res_html += `<li id="about"><a href="about.html">About</a></li>`
+
+    return res_html
+}
 
 function navigate(gag_title, gag_name, set_history) {
     set_page_vis(gag_name);
@@ -152,9 +165,21 @@ window.addEventListener("popstate", (e) => {
     }
 });
 
+// Sidebar
+const sidebar = generate_sidebar()
+d3.select(".sidebar").html(sidebar)
+// Make the buttons work
+document.querySelectorAll(".sidebar li").forEach(element => {
+    element.addEventListener("click", () => {
+        var gag_tag = element.getAttribute("data");
+        if (gag_tag) {
+            navigate(element.textContent, gag_tag, true)
+        }
+    });
+});
+
 // If we got redirected from 404, go to the given page, else navigate to pineapples
 const redirect_url = new URLSearchParams(document.location.search).get("url")
-console.log(redirect_url)
 if (redirect_url != null && metadata.gags[redirect_url] != null) {
     navigate(metadata.gags[redirect_url].title, redirect_url, true)
 } else {
